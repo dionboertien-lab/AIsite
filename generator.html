@@ -3,8 +3,19 @@
 <head>
   <title>Prompt Generator – AI Prompting</title>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="AI prompting tips, patronen en tools in het Nederlands: leer effectieve prompts schrijven, itereren en de nieuwste AI-updates volgen." />
+<meta name="keywords" content="AI, prompting, prompt engineering, tips, Nederlands, iteratie, prompt generator" />
+<meta name="author" content="AI Tips" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="AI Prompting – Tips, Tools & Updates" />
+<meta property="og:description" content="Schrijf betere prompts met onze generator en leer de nieuwste technieken. Inclusief iteratiegids en live updates." />
+<meta property="og:image" content="assets/img/hero-social.png" />
+<meta property="og:url" content="https://dionboertien-lab.github.io/AIsite/" />
+<link rel="canonical" href="https://dionboertien-lab.github.io/AIsite/" />
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="assets/css/styles.css?v=2" />
+
 </head>
 <body>
 <header class="site-header">
@@ -87,7 +98,29 @@
 <footer class="site-footer">
   <p>© <span id="year"></span> AI Prompting. Gemaakt met ❤️. <a href="sitemap.xml">Sitemap</a></p>
 </footer>
-<script defer src="assets/js/main.js"></script>
-<script defer src="assets/js/generator.js"></script>
+<!-- Cache-busting + inline fallback -->
+<script defer src="assets/js/main.js?v=2"></script>
+<script defer src="assets/js/generator.js?v=2"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var btn = document.getElementById('buildBtn');
+    var out = document.getElementById('promptOut');
+    var form = document.getElementById('promptForm');
+    if (!btn || !out || !form) return;
+    btn.addEventListener('click', function () {
+      var fd = new FormData(form);
+      var lines = [];
+      function add(k, label){ var v=(fd.get(k)||'').trim(); if(v) lines.push(label+': '+v); }
+      add('role','Role'); add('task','Task'); add('context','Context'); add('constraints','Constraints'); add('format','Output format');
+      var style=(fd.get('style')||'').trim(); if(style && style!=='Neutraal') lines.push('Stijl: '+style);
+      var lang=(fd.get('lang')||'').trim(); if(lang) lines.push('Taal: '+lang);
+      var ex=(fd.get('examples')||'').trim(); if(ex) lines.push('
+Voorbeelden (few-shot):
+'+ex);
+      out.textContent = lines.join('
+');
+    });
+  });
+</script>
 </body>
 </html>
