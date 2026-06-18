@@ -84,14 +84,6 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
-        externalNativeBuild {
-            cmake {
-                arguments "-DANDROID_STL=c++_shared"
-            }
-        }
-    }
-    packaging {
-        pickFirst '**/libc++_shared.so'
     }
     signingConfigs {
         debug {
