@@ -92,15 +92,6 @@ en de features uit de [backlog](./kern-backlog.md).
 
 ---
 
-## Legacy
-
-Deze repository bevatte eerder een statische "AI Prompting" website
-(`index.html`, `generator.html`, `tips.html`, `updates.html` en `assets/`).
-Die bestanden staan er nog, maar worden niet meer actief onderhouden — de repo
-richt zich nu op Kern.
-
----
-
 ## Licentie
 
 Vrij te gebruiken. De onderliggende methodologie (Schwartz-theorie, PVQ-21,
