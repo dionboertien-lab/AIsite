@@ -1,32 +1,4 @@
 {
-  "expo": {
-    "name": "kern",
-    "slug": "waardegedreven",
-    "owner": "dionb10s-organization",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
-    "ios": {
-      "supportsTablet": true
-    },
-    "android": {
-      "package": "nl.waardegedreven.kern",
-      "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
-      },
-      "predictiveBackGestureEnabled": false
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    },
-    "extra": {
-      "eas": {
-        "projectId": "0f18e552-3751-4dcb-93af-f37149ded4b3"
-      }
-    }
-  }
+  "name": "kern",
+  "displayName": "kern"
 }
